@@ -9,6 +9,8 @@ import Persona.*;
 import CourseSchedule.CourseOffer;
 import java.util.ArrayList;
 
+import CourseCatalog.Course;
+
 /**
  *
  * @author kal bugrara
@@ -57,5 +59,12 @@ public class FacultyProfile {
         }
         return false;
     }
-
+    // public void assignAsFacultyForCourse(Course course) {
+    // }
+    
+    public String getName() {
+        return person.getName();
+    }
+    
+    
 }

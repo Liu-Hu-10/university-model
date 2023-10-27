@@ -58,4 +58,30 @@ public class CourseSchedule {
         return sum;
     }
 
+    public void printEachCourseRevenue(){
+        System.out.println("Course Revenue:");
+        for (CourseOffer c : schedule) {
+            System.out.println("-------------------------");
+            System.out.println(schedule.indexOf(c) + 1 + ". " + c.getCourseNumber() + " - " + c.getCourseName());
+            System.out.println("   The total revenue of the course: " + c.getTotalCourseRevenues() + "$");
+        }
+
+    }
+    
+
+
+
+    public void printEachCourseOffer() {
+        System.out.println("---------------------------------");
+        System.out.println("Course Information:");
+        for (CourseOffer c : schedule) {
+            System.out.println("-------------------------");
+            System.out.println(schedule.indexOf(c) + 1 + ". " + c.getCourseNumber() + " - " + c.getCourseName());
+            System.out.println("   The teacher of the course: " + c.getFacultyProfile().getName());
+            System.out.println("   The number of registered students: " + c.getTakenSeats());
+            System.out.println("   The number of remaining seats: " + c.getRemainingSeats());
+        }
+    }
+    
+
 }

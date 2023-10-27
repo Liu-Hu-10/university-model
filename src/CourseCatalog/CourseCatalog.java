@@ -36,7 +36,7 @@ public class CourseCatalog {
         
         for( Course c: courselist){
             
-            if(c.getCOurseNumber().equals(n)) return c;
+            if(c.getCourseNumber().equals(n)) return c;
         }
         return null;
     }
@@ -44,7 +44,7 @@ public class CourseCatalog {
     public void printCourseCatalog(){
         System.out.println("Course Catalog");
         for(Course c: courselist){
-            System.out.println(courselist.indexOf(c) + 1 + ". " + c.getCOurseNumber() + " - " + c.getCourseName());
+            System.out.println(courselist.indexOf(c) + 1 + ". " + c.getCourseNumber() + " - " + c.getCourseName());
         }
     }
 

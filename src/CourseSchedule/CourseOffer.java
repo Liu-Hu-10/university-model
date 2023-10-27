@@ -34,8 +34,11 @@ public class CourseOffer {
         return facultyassignment.getFacultyProfile();
     }
 
+    public String getCourseName() {
+        return course.getCourseName();
+    }
     public String getCourseNumber() {
-        return course.getCOurseNumber();
+        return course.getCourseNumber();
     }
 
     public void generateSeats(int n) {
@@ -60,6 +63,7 @@ public class CourseOffer {
         if (anEmptySeat == null) {
             return null;
         }
+
         SeatAssignment sa = anEmptySeat.newSeatAssignment(cl); //seat is already linked to course offer
         cl.registerStudent(sa); //coures offer seat is now linked to student
         return sa;
@@ -84,4 +88,17 @@ public class CourseOffer {
         return course.getCredits();
     }
 
+    public int getRemainingSeats() {
+        int count = 0;
+        for (Seat s : seatlist) {
+            if (!s.isOccupied()) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    public int getTakenSeats() {
+        return seatlist.size() - getRemainingSeats();
+    }
 }

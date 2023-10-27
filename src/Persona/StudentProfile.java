@@ -9,6 +9,7 @@ import CourseSchedule.CourseLoad;
 import CourseSchedule.SeatAssignment;
 import Persona.EmploymentHistory.EmploymentHistroy;
 import java.util.ArrayList;
+import College.College;
 
 /**
  *

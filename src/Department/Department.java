@@ -28,7 +28,6 @@ public class Department {
     CourseCatalog coursecatalog;
     PersonDirectory persondirectory;
     StudentDirectory studentdirectory;
-    FacultyDirectory facultydirectory;
     EmployerDirectory employerdirectory;
     Degree degree;
 
@@ -79,6 +78,10 @@ public void addElectiveCourse(Course c){
 
     }
 
+    public String getName(){
+        return name;
+    }
+
     public Course newCourse(String n, String nm, int cr) {
 
         Course c = coursecatalog.newCourse(n, nm, cr);
@@ -106,4 +109,20 @@ public void addElectiveCourse(Course c){
         co.assignEmptySeat(cl);
 
     }
-}
+    
+    public void printCourseSchedule() {
+        System.out.println("Course Schedule for this semester:");
+        // for (Course course : courses) {
+        //     System.out.println("Course: " + course.getCourseName());
+        //     System.out.println("Teacher(s): " + course.getFacultyList());
+        //     System.out.println("Number of registered students: " + course.getNumberOfRegisteredStudents());
+        //     System.out.println("Remaining empty seats: " + course.getRemainingEmptySeats());
+        //     System.out.println();
+        // }
+        coursecatalog.printCourseCatalog();
+    }
+        
+
+    }
+    
+

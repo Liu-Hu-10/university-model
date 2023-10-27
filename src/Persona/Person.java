@@ -32,7 +32,7 @@ public class Person {
     }
 
     @Override
-    public String toString(){
+    public String toString(){  // State of objects.
         return name;
     }
     

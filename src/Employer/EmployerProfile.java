@@ -16,7 +16,7 @@ public class EmployerProfile {
     String name;
     ArrayList<Employment> employments;
     public EmployerProfile(String n){  //could be company instead of just a name as a string
-        name = n;
+       this.name = n;  // Avoid ambiguity.
         
     }
          public boolean isMatch(String id){

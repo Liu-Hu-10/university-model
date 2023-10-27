@@ -13,9 +13,19 @@ import java.util.ArrayList;
  * @author kal bugrara
  */
 public class College {
+    public String name;
     ArrayList<Department> departments;
     
     public College(String name){
+        this.name = name;
         departments = new ArrayList();
     }
+
+    public String getName() {
+        return name;
+    }
+    public void addDepartment(Department department) {
+        departments.add(department);
+    }
+
 }

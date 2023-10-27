@@ -46,8 +46,14 @@ public class SeatAssignment {
         return getCreditHours()*grade;
     }
     
-    public void printSeatInfo(){
-        System.out.println(getAssociatedCourse().getCOurseNumber() + " " + getAssociatedCourse().getCourseName()+ " | " + getCreditHours() + " credits | " + "Grade: " + grade);
+    public void setGrade(float grade) {
+        this.grade = grade;
     }
+
+    
+    public void printSeatInfo(){
+        System.out.println(getAssociatedCourse().getCourseNumber() + " " + getAssociatedCourse().getCourseName()+ " | " + getCreditHours() + " credits | " + "Grade: " + grade);
+    }
+
     
 }
